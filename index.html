@@ -3,69 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizlilik Politikası ve Güvenlik Standartları - Ignayt</title>
+    <title>Gizlilik Politikası ve Veri Güvenliği - Ignayt</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #334155; max-width: 850px; margin: 0 auto; padding: 40px 20px; background-color: #f8fafc; }
         .container { background: #ffffff; padding: 40px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; }
         h1 { color: #06b6d4; font-size: 28px; border-bottom: 2px solid #06b6d4; padding-bottom: 10px; }
         h2 { color: #1e293b; font-size: 20px; margin-top: 30px; border-left: 4px solid #06b6d4; padding-left: 10px; }
         p, li { font-size: 15px; }
-        .disclaimer { background: #fff1f2; padding: 20px; border-left: 5px solid #e11d48; border-radius: 8px; margin: 20px 0; font-weight: bold; color: #9f1239; }
         .safety-box { background: #f0fdf4; padding: 20px; border-left: 5px solid #22c55e; border-radius: 8px; margin: 20px 0; color: #166534; }
         .update-date { color: #64748b; font-size: 13px; font-style: italic; }
         code { background: #f1f5f9; padding: 2px 5px; border-radius: 4px; font-size: 14px; }
         ul { padding-left: 20px; }
+        .highlight { font-weight: bold; color: #0f172a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Gizlilik Politikası ve Güvenlik Standartları</h1>
+        <h1>Gizlilik Politikası ve Veri Güvenliği</h1>
         <p class="update-date">Son Güncelleme: 27 Aralık 2025</p>
 
-        
+        <p>Bu Gizlilik Politikası, <code>com.ignayt.app</code> paket adına sahip <span class="highlight">Ignayt</span> mobil uygulamasını kullanan kişilerin verilerinin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.</p>
 
-        <p>Bu politika, <code>com.ignayt.app</code> paket adına sahip "Ignayt" mobil uygulamasının veri toplama süreçlerini ve çocuk güvenliği standartlarını açıklar.</p>
-
-        <h2>1. Toplanan Veriler ve Kullanımı</h2>
+        <h2>1. Toplanan Veriler (Collected Data)</h2>
+        <p>Uygulama işlevselliğini sağlamak amacıyla aşağıdaki veriler toplanmaktadır:</p>
         <ul>
-            <li><strong>Kişisel Bilgiler:</strong> Kayıt sırasında alınan Ad-Soyad, E-posta adresi ve profil detayları (Şehir, İlçe, Mevki).</li>
-            <li><strong>Uygulama İçi Veriler:</strong> Maç katılım geçmişi, topladığınız XP puanları, lig sıralamanız ve klan bilgileriniz.</li>
-            <li><strong>Reklam Kimliği:</strong> Reklam performansını ölçmek ve kişiselleştirmek için cihazınızın Reklam Kimliği (AAID/IDFA) kullanılabilir.</li>
+            <li><span class="highlight">Kişisel Bilgiler:</span> Ad-Soyad, E-posta adresi ve kullanıcı kimlik numarası (UID).</li>
+            <li><span class="highlight">Yaklaşık Konum:</span> Kullanıcı tarafından manuel olarak seçilen Şehir ve İlçe bilgileri (Hassas GPS verisi toplanmaz, sadece maç filtreleme için kullanılır).</li>
+            <li><span class="highlight">Satın Alma Geçmişi:</span> RevenueCat üzerinden yönetilen abonelik durumu ve ödeme geçmişi bilgileri.</li>
+            <li><span class="highlight">Uygulama Etkileşimleri:</span> Oluşturulan maç ilanları, klan katılım verileri, kazanılan XP puanları ve lig sıralaması.</li>
+            <li><span class="highlight">Cihaz Kimlikleri:</span> Bildirim gönderimi için Push Token ve reklam analitiği için Reklam Kimliği (AAID/IDFA).</li>
         </ul>
 
-        <h2>2. Üçüncü Taraf Servisler ve Veri Paylaşımı</h2>
-        <p>Uygulamamız aşağıdaki servis sağlayıcıları kullanmaktadır:</p>
+        <h2>2. Veri Paylaşımı (Shared Data)</h2>
+        <p>Verileriniz yalnızca uygulamanın temel servislerini çalıştırmak amacıyla aşağıdaki güvenilir üçüncü taraflarla paylaşılır:</p>
         <ul>
-            <li><strong>Firebase (Google):</strong> Kimlik doğrulama, bulut veritabanı ve anlık bildirimler için kullanılır.</li>
-            <li><strong>Google AdMob:</strong> Uygulama içinde banner ve geçiş reklamları sunmak için kullanılır.</li>
-            <li><strong>RevenueCat & Google Play Billing:</strong> Pro üyelik işlemleri için kullanılır. Kredi kartı bilgileriniz tarafımızca toplanmaz; Google Play altyapısı tarafından işlenir.</li>
+            <li><span class="highlight">Google Firebase:</span> Veri saklama, kimlik doğrulama ve altyapı hizmetleri için.</li>
+            <li><span class="highlight">Google AdMob:</span> Uygulama içi reklam sunumu ve reklam performans analitiği için.</li>
+            <li><span class="highlight">RevenueCat:</span> Dijital aboneliklerin doğrulanması ve yönetilmesi için.</li>
         </ul>
 
         <div class="safety-box">
-            <h2>3. Çocuk Güvenliği ve CSAE/CSAM Standartları</h2>
-            <p>Ignayt olarak, çocukların korunmasına yönelik en yüksek standartları uygulamaktayız:</p>
+            <h2>3. Çocuk Güvenliği ve CSAM Politikası</h2>
+            <p>Ignayt, topluluk güvenliğini her şeyin üzerinde tutar:</p>
             <ul>
-                <li><strong>Sıfır Tolerans:</strong> Çocukların cinsel istismarı malzemelerine (CSAM) ve sömürüsüne karşı sıfır tolerans politikası izlenmektedir.</li>
-                <li><strong>İçerik Filtreleme:</strong> Uygulama içindeki tüm metin girişleri (saha isimleri, açıklamalar vb.) uygunsuz dil ve materyallere karşı otomatik filtreleme yazılımları (bad words filter) ile taranmaktadır.</li>
-                <li><strong>Raporlama Mekanizması:</strong> Kullanıcılar, çocuk güvenliğini tehdit eden veya uygunsuz olan her türlü durumu uygulama içinden bildirebilir veya doğrudan <code>innkeeperforge@gmail.com</code> adresine raporlayabilir.</li>
-                <li><strong>Yasal Uyum:</strong> Tespit edilen veya raporlanan tüm istismar vakaları derhal ilgili ulusal makamlara ve uluslararası kuruluşlara (NCMEC vb.) bildirilmektedir.</li>
+                <li>Çocukların cinsel istismarı materyallerine (CSAM) karşı <span class="highlight">sıfır tolerans</span> uygulanır.</li>
+                <li>Maç açıklamaları ve kullanıcı metinleri, uygunsuz içeriklere karşı otomatik filtreleme sistemleri ile denetlenir.</li>
+                <li>Uygunsuz durumlar uygulama içinden veya <code>innkeeperforge@gmail.com</code> adresinden anında raporlanabilir.</li>
             </ul>
         </div>
 
-        <h2>4. Veri Güvenliği</h2>
-        <p>Tüm kullanıcı verileri Google Firebase'in güvenli ve şifreli sunucularında saklanmaktadır. Veri iletimi SSL/TLS protokolleri ile korunmaktadır.</p>
+        <h2>4. Veri Güvenliği ve Şifreleme</h2>
+        <p>Tüm kullanıcı verileri, iletim sırasında (in transit) endüstri standardı olan <span class="highlight">SSL/TLS şifreleme</span> protokolleri ile korunur. Veriler, Google Firebase'in güvenli bulut altyapısında saklanmaktadır.</p>
 
-        <h2>5. Veri Silme ve Hesap Kapatma</h2>
-        <p>Kullanıcılarımız istedikleri zaman verilerini silme hakkına sahiptir:</p>
+        <h2>5. Kullanıcı Hakları ve Veri Silme</h2>
+        <p>Kullanıcılar verileri üzerinde tam kontrole sahiptir:</p>
         <ul>
-            <li><strong>Uygulama İçinden:</strong> Profil sayfasındaki Ayarlar menüsü üzerinden hesabınızı ve tüm verilerinizi kalıcı olarak silebilirsiniz.</li>
-            <li><strong>E-posta Yoluyla:</strong> <code>innkeeperforge@gmail.com</code> adresine talebinizi ileterek verilerinizin silinmesini isteyebilirsiniz.</li>
+            <li><span class="highlight">Hesap Silme:</span> Uygulama içindeki Profil > Ayarlar menüsü üzerinden hesabınızı ve tüm ilişkili verilerinizi kalıcı olarak silebilirsiniz.</li>
+            <li><span class="highlight">Manuel Talep:</span> Hesabınıza erişemediğiniz durumlarda <code>innkeeperforge@gmail.com</code> adresine mail atarak verilerinizin 7 iş günü içinde silinmesini talep edebilirsiniz.</li>
+            <li><span class="highlight">Bağımsız İçerik Silme:</span> Oluşturduğunuz maç ilanlarını veya klan bilgilerini hesabı silmeden de temizleyebilirsiniz.</li>
         </ul>
 
-        <h2>6. İletişim</h2>
-        <p>Çocuk güvenliği, CSAE raporları ve gizlilik sorularınız için belirlenen iletişim noktası:</p>
-        <p><strong>Yetkili E-posta:</strong> innkeeperforge@gmail.com<br>
-        <strong>Web:</strong> https://tuzzon.co</p>
+        <h2>6. İletişim ve Raporlama</h2>
+        <p>Gizlilik sorularınız veya içerik raporlama talepleriniz için:</p>
+        <p>
+            <strong>Geliştirici:</strong> Innkeeper Forge<br>
+            <strong>E-posta:</strong> innkeeperforge@gmail.com<br>
+            <strong>Web:</strong> https://tuzzon.co
+        </p>
     </div>
 </body>
 </html>
